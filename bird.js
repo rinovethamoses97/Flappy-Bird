@@ -1,11 +1,22 @@
 class Bird{
     constructor(){
-        this.radius=32;
+        this.diameter=32;
         this.y=height/2;
         this.x=20;
+        this.gravity=0.6;
+        this.velocity=0;
+        this.lift=-10;
     }
     show(){
         fill(255);
-        ellipse(this.x,this.y,this.radius,this.radius);
+        ellipse(this.x,this.y,this.diameter,this.diameter);
+    }
+    update(){
+        this.velocity+=this.gravity;
+        this.y+=this.velocity;
+        if(this.y+this.diameter/2>=height){
+            this.y=height-this.diameter/2;
+            this.velocity=0;
+        }
     }
 }
