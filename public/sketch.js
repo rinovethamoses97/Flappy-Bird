@@ -1,5 +1,9 @@
 var bird;
 var pipes=[];
+var song;
+function preload(){
+    song=loadSound("backgroundSong.mp3");
+}
 function setup(){
     createCanvas(400,600);
     background(0);
