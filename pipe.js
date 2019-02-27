@@ -6,7 +6,7 @@ class Pipe{
         this.bottom=random(height/2);
         this.top=random(height/2);
         this.y2=height-this.top;
-        this.speed=5;
+        this.speed=3;
     }
     show(){
         fill(255);
