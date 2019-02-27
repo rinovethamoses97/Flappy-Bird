@@ -3,9 +3,9 @@ class Bird{
         this.diameter=32;
         this.y=height/2;
         this.x=20;
-        this.gravity=0.6;
+        this.gravity=0.5;
         this.velocity=0;
-        this.lift=-20;
+        this.lift=-15;
     }
     show(){
         fill(255);
@@ -16,6 +16,10 @@ class Bird{
         this.y+=this.velocity;
         if(this.y+this.diameter/2>=height){
             this.y=height-this.diameter/2;
+            this.velocity=0;
+        }
+        if(this.y-this.diameter/2<=0){
+            this.y=this.diameter/2;
             this.velocity=0;
         }
     }
