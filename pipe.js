@@ -1,10 +1,12 @@
 class Pipe{
     constructor(){
+        this.spacing=random(40,300);
+        this.spacingCentre=random(0,height);
         this.width=random(15,50);
         this.x=width-this.width;
         this.y1=0;
-        this.bottom=random(height/2);
-        this.top=random(height/2);
+        this.bottom=this.spacingCentre-(this.spacing/2);
+        this.top=height-this.spacingCentre-(this.spacing/2);
         this.y2=height-this.top;
         this.speed=3;
         this.hit=false;
