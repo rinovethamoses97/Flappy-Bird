@@ -9,8 +9,12 @@ function setup(){
     background(0);
     bird=new Bird();
     pipes.push(new Pipe());
+    song.play();
 }
 function draw(){
+    if(!song.isPlaying()){
+        song.play();
+    }
     background(0);
     fill(255);
     textSize(10);
