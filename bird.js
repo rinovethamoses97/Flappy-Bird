@@ -5,7 +5,7 @@ class Bird{
         this.x=20;
         this.gravity=0.6;
         this.velocity=0;
-        this.lift=-10;
+        this.lift=-20;
     }
     show(){
         fill(255);
@@ -18,5 +18,8 @@ class Bird{
             this.y=height-this.diameter/2;
             this.velocity=0;
         }
+    }
+    up(){
+        this.velocity+=this.lift; 
     }
 }
