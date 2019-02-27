@@ -16,4 +16,12 @@ class Pipe{
     update(){
         this.x-=this.speed;
     }
+    hits(bird){
+        if(collideRectCircle(this.x,this.y1,this.width,this.bottom,bird.x,bird.y,bird.diameter) || collideRectCircle(this.x,this.y2,this.width,this.top,bird.x,bird.y,bird.diameter)){
+            return true;     
+        }
+        else{
+            return false;
+        }
+    }
 }
