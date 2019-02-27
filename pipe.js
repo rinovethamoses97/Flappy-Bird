@@ -1,6 +1,6 @@
 class Pipe{
     constructor(){
-        this.width=15;
+        this.width=random(15,50);
         this.x=width-this.width;
         this.y1=0;
         this.bottom=random(height/2);
