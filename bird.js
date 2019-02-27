@@ -6,6 +6,8 @@ class Bird{
         this.gravity=0.5;
         this.velocity=0;
         this.lift=-15;
+        this.score=0;
+        this.crossedBird=false;
     }
     show(){
         fill(255);

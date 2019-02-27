@@ -7,9 +7,13 @@ class Pipe{
         this.top=random(height/2);
         this.y2=height-this.top;
         this.speed=3;
+        this.hit=false;
     }
     show(){
-        fill(255);
+        if(this.hit)
+            fill(255,0,0)
+        else
+            fill(255);
         rect(this.x,this.y1,this.width,this.bottom);
         rect(this.x,this.y2,this.width,this.top);
     }
@@ -19,6 +23,14 @@ class Pipe{
     hits(bird){
         if(collideRectCircle(this.x,this.y1,this.width,this.bottom,bird.x,bird.y,bird.diameter) || collideRectCircle(this.x,this.y2,this.width,this.top,bird.x,bird.y,bird.diameter)){
             return true;     
+        }
+        else{
+            return false;
+        }
+    }
+    offscreen(){
+        if(this.x< -this.width){
+            return true;
         }
         else{
             return false;
